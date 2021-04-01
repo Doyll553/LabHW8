@@ -1,9 +1,5 @@
-// load the airtable library, call it "Airtable"
 var Airtable = require("airtable");
 
-// use the airtable library to get a variable that represents one of our bases
-// We needed to put in the right apiKey and
-// base ID here!
 var base = new Airtable({ apiKey: "keyDvpfoibL19TD8A" }).base("applFwJrwpywAlhGs"
 );
 
@@ -54,6 +50,29 @@ function showPeople() {
 
 
     /**TO DO: Write JavaScript code to add each character's information onto the webpage**/
+    const personImg = document.createElement("img");
+    personImg.src = person.fields.images[0].url;
+    peopleContainer.appendChild(personImg);
 
+    const personName = document.createElement("h1");
+    personName.innerText = person.fields.name;
+    peopleContainer.appendChild(personName);
+
+    const personBio = document.createElement("p");
+    personBio.innerText = person.fields.bio;
+    peopleContainer.appendChild(personBio);
+
+    //div
+
+    let div = document.createElement('div');
+    div.id = 'content';
+    div.className = 'note';
+
+    document.body.appendChild(div);
   });
+
 }
+   
+
+
+

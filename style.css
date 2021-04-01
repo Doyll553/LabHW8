@@ -1,0 +1,27 @@
+h2{
+	font-family: Dela Gothic One;
+	font-size: 80px;
+	color: lightblue;
+	text-align: center;
+}
+img{
+	width: 400px;
+	display: flex;
+	justify-content: center;
+	margin: auto;
+}
+h1{
+	font-family: Dela Gothic One;
+	color: white;
+	font-size: 100px;
+	text-align: center;
+}
+p{
+	text-align: center;
+	font-family: New Tegomin;
+	color: yellow;
+	font-size: 50px;
+}
+body{
+	background-color: black;
+}
