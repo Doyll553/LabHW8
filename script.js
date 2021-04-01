@@ -48,8 +48,6 @@ function showPeople() {
     console.log("SHOWING THE PERSON")
     console.log(person.fields);
 
-
-    /**TO DO: Write JavaScript code to add each character's information onto the webpage**/
     const personImg = document.createElement("img");
     personImg.src = person.fields.images[0].url;
     peopleContainer.appendChild(personImg);
@@ -62,13 +60,20 @@ function showPeople() {
     personBio.innerText = person.fields.bio;
     peopleContainer.appendChild(personBio);
 
-    //div
-
     let div = document.createElement('div');
-    div.id = 'content';
-    div.className = 'note';
+    div.appendChild(personImg);
+    div.appendChild(personName);
+    div.appendChild(personBio);
 
     document.body.appendChild(div);
+
+    //div
+
+    // let div = document.createElement('div');
+    // div.id = 'content';
+    // div.className = 'note';
+
+    // document.body.appendChild(div);
   });
 
 }
